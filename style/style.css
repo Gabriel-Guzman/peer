@@ -15,8 +15,12 @@ a:hover {
 .btn-default:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
+  background: #fff;
   border: 1px solid #fff;
+}
+
+.btn:hover {
+    background:#e6e6e6;
 }
 
 
@@ -27,7 +31,8 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background-image: url("facebook-bg.png");
+  background: black;
 }
 body {
   color: #fff;
