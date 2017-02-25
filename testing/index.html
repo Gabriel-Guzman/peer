@@ -10,6 +10,9 @@
 
 	<script>
 
+		var userIdToSearch = "walmart";
+		var parsedResponse;
+		var users = [];
 		function offense(offense)
 			{
 				this.offenses = [];
@@ -26,13 +29,36 @@
 				this.id = id;
 				this.offense = new offense();
 
+				this.getName = function() {
+					return name;
+				}
+
 				this.addOffense = function(text) {
 					this.offense.addOffense(text);
 				}
+
+				this.getOffensesCounter = function() {
+					return this.offense.counter;
+				}
+
+				this.getOffenses = function() {
+					return offenses;
+				}
 			}
-		var userIdToSearch = "walmart";
-		var parsedResponse;
-		var users = [];
+
+		function searchUsers(id){
+			var found = false;
+			users.forEach(checkId);
+
+			for (user in users) {
+				if(user.getName() === id) {
+					found = true;
+				}
+			}
+
+			return found;
+		}
+		
 		logInWithFacebook = function() {
 			FB.login(function(response) {
 				if (response.authResponse) {
@@ -48,11 +74,15 @@
 							'GET',
 							{"fields":"posts{comments{created_time,from,message}}"},
 							function(response) {
-								console.log(response);
-								posts = item['posts'];
-								function parsePosts(item, index) {
-									
-								}
+								//console.log(response);
+								posts = response['posts']['data'];
+								console.log(posts);
+
+								for (i = 0; i < posts.length; i++) {
+									for (comment in posts[i]['comments']['data']) {
+										//ask watson about individual comments
+									}
+								}						  		
 						  }
 						);
 					}
