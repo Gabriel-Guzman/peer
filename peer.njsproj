@@ -11,7 +11,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4ee6e4e0-9e27-416e-8848-ab129dd62e45</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>app.js</StartupFile>
+    <StartupFile>server.js</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -41,13 +41,12 @@
     <Content Include="views\layout.pug" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="app.js" />
+    <Compile Include="server.js" />
     <Compile Include="routes\about.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\results.js" />
     <Compile Include="routes\start.js" />
     <Compile Include="routes\users.js" />
-    <Compile Include="server.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
