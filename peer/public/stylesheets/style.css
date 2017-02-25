@@ -32,15 +32,15 @@ html,
 body {
     height: 100%;
     background:white;
-    background-image:url("../images/facebook-bg.png"), url("../images/comments.png");
-    background-repeat: repeat-x, repeat;
-    background-size: 100%;
 }
-body {
+#front-page body {
     color: #1D2026;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
     margin:0px;
+    background-image:url("../images/facebook-bg.png"), url("../images/comments.png");
+    background-repeat: repeat-x, repeat;
+    background-size: 100%;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -118,7 +118,6 @@ body {
 
 .cover {
     padding: 0 20px;
-    background: url("images/facebook-bg.png") no-repeat scroll 0px 100%;
 
 }
 .cover .btn-lg {
