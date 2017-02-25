@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="facebook_api_test.js"></script>
+	<title>test</title>
+</head>
+<body>
+
+	<p><a href="#" onClick="logInWithFacebook()">Log In with the JavaScript SDK</a></p>
+
+	<script>
+
+		logInWithFacebook = function() {
+			FB.login(function(response) {
+				if (response.authResponse) {
+					alert('You are logged in &amp; cookie set!');
+					// Now you can redirect the user or do an AJAX request to
+					// a PHP script that grabs the signed request from the cookie
+					function testAPI() {
+						console.log('Welcome!  Fetching your information.... ');
+						FB.api('/me', function(response) {
+						console.log('Successful login for: ' + response.name);
+						document.getElementById('status').innerHTML =
+						'Thanks for logging in, ' + response.name + '!';
+						});
+					}
+
+					testAPI();
+
+
+				} else {
+					alert('Login failed.');
+					console.log("FAILED");
+				}
+			});
+			return false;
+		};
+
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId: '165008204006667',
+				cookie: true, // This is important, it's not enabled by default
+				version: 'v2.8'
+			});
+
+
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+  		}(document, 'script', 'facebook-jssdk'));
+
+	</script>
+	<p id="status"></p>
+
+</body>
+</html>
