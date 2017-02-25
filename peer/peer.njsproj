@@ -30,7 +30,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="bin\www" />
+    <Content Include="obj\Debug\CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\peer.njsproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\peer.njsprojResolveAssemblyReference.cache" />
     <Content Include="package.json" />
+    <Content Include="public\index.html" />
     <Content Include="public\stylesheets\style.css" />
     <Content Include="views\error.pug" />
     <Content Include="views\index.pug" />
@@ -38,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="app.js" />
+    <Compile Include="routes\about.js" />
     <Compile Include="routes\index.js" />
+    <Compile Include="routes\results.js" />
+    <Compile Include="routes\start.js" />
     <Compile Include="routes\users.js" />
   </ItemGroup>
   <ItemGroup>
