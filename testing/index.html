@@ -10,19 +10,51 @@
 
 	<script>
 
+		function offense(offense)
+			{
+				this.offenses = [];
+				this.counter = 0;
+
+				this.addOffense = function(offense) {
+					offenses.push(offense); 
+					counter++;
+				}
+			}
+		function person(name,id,offense)
+			{
+				this.name = name;
+				this.id = id;
+				this.offense = new offense();
+
+				this.addOffense = function(text) {
+					this.offense.addOffense(text);
+				}
+			}
+		var userIdToSearch = "walmart";
+		var parsedResponse;
+		var users = [];
 		logInWithFacebook = function() {
 			FB.login(function(response) {
 				if (response.authResponse) {
 					alert('You are logged in &amp; cookie set!');
+					var accessToken = response.authResponse.accessToken;
 					// Now you can redirect the user or do an AJAX request to
 					// a PHP script that grabs the signed request from the cookie
 					function testAPI() {
 						console.log('Welcome!  Fetching your information.... ');
-						FB.api('/me', function(response) {
-						console.log('Successful login for: ' + response.name);
-						document.getElementById('status').innerHTML =
-						'Thanks for logging in, ' + response.name + '!';
-						});
+
+						FB.api(
+							'/' + userIdToSearch,
+							'GET',
+							{"fields":"posts{comments{created_time,from,message}}"},
+							function(response) {
+								console.log(response);
+								posts = item['posts'];
+								function parsePosts(item, index) {
+									
+								}
+						  }
+						);
 					}
 
 					testAPI();
