@@ -47,6 +47,7 @@
     <Compile Include="routes\results.js" />
     <Compile Include="routes\start.js" />
     <Compile Include="routes\users.js" />
+    <Compile Include="server.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\" />
