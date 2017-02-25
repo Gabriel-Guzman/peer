@@ -6,21 +6,21 @@
 a,
 a:focus,
 a:hover {
-    color: #fff;
+    color: #9daccb;
 }
 
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
-    color: #333;
+    color: #fff;
     text-shadow: none; /* Prevent inheritance from `body` */
-    background: #fff;
+    background: #3B5998;
     border: 1px solid #fff;
 }
 
 .btn:hover {
-    background:#e6e6e6;
+    background:#9daccb;
 }
 
 
@@ -31,10 +31,13 @@ a:hover {
 html,
 body {
     height: 100%;
-    background-image:url("../images/facebook-bg.png");
+    background:white;
+    background-image:url("../images/facebook-bg.png"), url("../images/comments.png");
+    background-repeat: repeat-x, repeat;
+    background-size: 100%;
 }
 body {
-    color: #fff;
+    color: #1D2026;
     text-align: center;
     text-shadow: 0 1px 3px rgba(0,0,0,.5);
     margin:0px;
@@ -83,21 +86,20 @@ body {
     padding-left: 0;
     font-size: 16px;
     font-weight: bold;
-    color: #fff; /* IE8 proofing */
-    color: rgba(255,255,255,.75);
+    color: #1D2026; /* IE8 proofing */
+    color: #4A4C51;
     border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
     background-color: transparent;
-    border-bottom-color: #a9a9a9;
-    border-bottom-color: rgba(255,255,255,.25);
+    border-bottom-color: #3B5998;
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-    color: #fff;
-    border-bottom-color: #fff;
+    color: #1D2026;
+    border-bottom-color: #3B5998;
 }
 
 @media (min-width: 768px) {
@@ -130,8 +132,8 @@ body {
  */
 
 .mastfoot {
-    color: #999; /* IE8 proofing */
-    color: rgba(255,255,255,.5);
+    color: #1D2026; /* IE8 proofing */
+    color: #1D2026;
 }
 
 
