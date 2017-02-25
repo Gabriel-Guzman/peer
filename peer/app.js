@@ -43,4 +43,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.listen(1337, function () {
+    console.log('Example app listening on port 1337!')
+})
+
 module.exports = app;
